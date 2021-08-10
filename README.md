@@ -1,5 +1,5 @@
 
-AUTHOR : tbillon 
+AUTHOR : tbillon
 PROM : nov 2020
 
 - This project is to be coded in C, following the 42's Norm. Any leak, crash, undefinedbehavior, or norm error means 0 to the project.
