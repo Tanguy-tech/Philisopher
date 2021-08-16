@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tanguy <tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/10 10:26:39 by tanguy            #+#    #+#             */
-/*   Updated: 2021/08/16 10:03:14 by tanguy           ###   ########.fr       */
+/*   Created: 2021/08/16 09:36:09 by tanguy            #+#    #+#             */
+/*   Updated: 2021/08/16 10:12:26 by tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philo.h>
 
-int main(int ac, char **av)
+// initialisation de la strucutre principale au lancement du programme
+int init_struct(t_args *philo, char **av, int ac)
 {
-    t_args  args;
-    
-    if (error_check(ac, av) == 1)
-        // initialiser strucutre et lancer programme
-    return (0);
+    philo->amount_to_eat = -1;
+    philo->nb_of_philo = ft_atoi(av[1]);
+    philo->t_die = ft_atoi(av[2]);
+    philo->t_eat = ft_atoi(av[3]);
+    philo->t_sleep = ft_atoi(av[4]);
+    if (ac == 6)
+        philo->amount_to_eat = ft_atoi(av[5]);
 }
