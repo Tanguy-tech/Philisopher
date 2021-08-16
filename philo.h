@@ -6,7 +6,7 @@
 /*   By: tanguy <tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 10:27:52 by tanguy            #+#    #+#             */
-/*   Updated: 2021/08/16 10:11:05 by tanguy           ###   ########.fr       */
+/*   Updated: 2021/08/16 10:30:17 by tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,8 @@ int	ft_atoi(const char *str);
 
 /*  ERRORS  */
 int error_check(int ac, char **av);
+
+/*  INIT    */
+int init_struct(t_args *philo, char **av, int ac);
 
 #endif
