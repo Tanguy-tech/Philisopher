@@ -6,7 +6,7 @@
 #    By: tanguy <tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/10 10:07:12 by tanguy            #+#    #+#              #
-#    Updated: 2021/08/16 11:07:32 by tanguy           ###   ########.fr        #
+#    Updated: 2021/08/18 09:38:07 by tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,7 @@ END         =   \033[0m
 
 HEAD = philo.h
 
-SRCS = main.c init.c errors.c display.c death.c time.c utils.c
-
-OBJS = $(SRCS:.c=.o)
+SRCS = 
 
 CC = gcc
 
@@ -36,13 +34,7 @@ RM = rm -rf
 
 FLAGS = -Wall -Werror -Wextra
 
-$(NAME):	$(OBJS)
-				$(CC) $(FLAGS) -o philo $(OBJS) $(HEAD)
-
-all:		$(NAME)
-
-%.o: %.c $(HEAD)
-		@$(CC) $(FLAGS) -c $< -o $@ -I $(HEAD)
+all:
 
 norme:		
 			@norminette *.c
