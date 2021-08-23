@@ -6,7 +6,7 @@
 /*   By: tanguy <tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 09:27:08 by tanguy            #+#    #+#             */
-/*   Updated: 2021/08/18 09:09:47 by tanguy           ###   ########.fr       */
+/*   Updated: 2021/08/23 10:16:13 by tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,10 @@ int	ft_atoi(const char *str)
 
 int	ft_strlen(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
 		i++;
 	return (i);
 }
-
-
