@@ -6,7 +6,7 @@
 #    By: tanguy <tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/10 10:07:12 by tanguy            #+#    #+#              #
-#    Updated: 2021/08/23 10:26:30 by tanguy           ###   ########.fr        #
+#    Updated: 2021/08/25 09:04:26 by tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ END         =   \033[0m
 
 HEAD = philo.h
 
-SRCS = actions.c errors.c init.c main.c philosopher.c utils.c 
+SRCS = actions.c errors.c init.c main.c philosopher.c utils.c display.c
 
 OBJS_SRCS = $(addprefix ./srcs/, $(SRCS:.c=.o))
 

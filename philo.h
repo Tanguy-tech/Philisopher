@@ -6,7 +6,7 @@
 /*   By: tanguy <tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 10:27:52 by tanguy            #+#    #+#             */
-/*   Updated: 2021/08/19 10:23:19 by tanguy           ###   ########.fr       */
+/*   Updated: 2021/08/25 09:03:32 by tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,14 @@
 
 typedef struct  s_philo
 {
-    int         id; /* ID of the current philosopher */
-    int         l_fork; /* Left fork */
-    int         r_fork; /* Right fork */
-    int         amount_ate; /* Amount already ate by the philosopher */
-    int         is_dead; /* is dead 1 or not 0 */
-    long long   last_meal; /* Last meal ate */
-    pthread_t   th_id; /* ID of the thread for the current philosopher */
+    int                     id; /* ID of the current philosopher */
+    pthread_mutex_t         *l_fork; /* Left fork */
+    pthread_mutex_t         *r_fork; /* Right fork */
+    pthread_mutex_t         *display;
+    int                     amount_ate; /* Amount already ate by the philosopher */
+    int                     is_dead; /* is dead 1 or not 0 */
+    long long               last_meal; /* Last meal ate */
+    pthread_t               th_id; /* ID of the thread for the current philosopher */
 }               t_philo;
 
 typedef struct  s_data
