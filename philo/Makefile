@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 14:13:58 by Tanguy            #+#    #+#              #
-#    Updated: 2021/11/29 14:14:00 by Tanguy           ###   ########.fr        #
+#    Updated: 2021/11/29 14:16:34 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,12 @@ BOLD        =   \033[1m
 UNDER       =   \033[4m
 SUR         =   \033[7m
 END         =   \033[0m
+
+NAME =	philo
+
+CC =	gcc
+
+FLAGS =	-Wall -Werro -Wextra
 
 all:	$(NAME)
 
