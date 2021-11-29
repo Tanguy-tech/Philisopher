@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 14:13:58 by Tanguy            #+#    #+#              #
-#    Updated: 2021/11/29 14:16:34 by Tanguy           ###   ########.fr        #
+#    Updated: 2021/11/29 15:04:07 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,10 @@ NAME =	philo
 CC =	gcc
 
 FLAGS =	-Wall -Werro -Wextra
+
+FILES = errors.c init.c
+
+HEADER = philo.h
 
 all:	$(NAME)
 
