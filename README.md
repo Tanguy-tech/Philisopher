@@ -1,9 +1,9 @@
 
-👨🏻‍💻 This is the README file for 42 project ft_printf
+👨🏻‍💻 This is the README file for 42 project philosopher
 
 👨🏼‍🎓 Authors: tbillon - prom 2020 contact: tbillon@student.42lyon.fr
 
-📒 Subject: [Find the Ft_Printf subject HERE](https://cdn.intra.42.fr/pdf/pdf/32896/fr.subject.pdf)
+📒 Subject: [Find the Philosopher subject HERE](https://cdn.intra.42.fr/pdf/pdf/34975/en.subject.pdf)
 
 ![Made with C](https://forthebadge.com/images/badges/made-with-c.svg) ![Powered by coffee](https://forthebadge.com/images/badges/powered-by-coffee.svg) ![Built with love](https://forthebadge.com/images/badges/built-with-love.svg)
 
