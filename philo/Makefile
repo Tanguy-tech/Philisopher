@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 14:13:58 by Tanguy            #+#    #+#              #
-#    Updated: 2021/11/29 15:04:07 by Tanguy           ###   ########.fr        #
+#    Updated: 2021/12/01 09:21:48 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,15 +24,19 @@ UNDER       =   \033[4m
 SUR         =   \033[7m
 END         =   \033[0m
 
-NAME =	philo
-
 CC =	gcc
 
 FLAGS =	-Wall -Werro -Wextra
 
-FILES = errors.c init.c
+SRCS = errors.c init.c utils.c
 
 HEADER = philo.h
+
+OBJS_SRCS = $(SRCS:.c=.o)
+
+$(NAME):	$(OBJS_SRCS)
+				@printf "$(ERASE)$(GREEN)->*.o created with success$(END)\n"
+				@$(CC) $(FLAGS) $(OBJS_SRCS) -I $(HEADER) -o philo
 
 all:	$(NAME)
 
