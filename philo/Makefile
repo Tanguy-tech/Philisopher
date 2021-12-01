@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 14:13:58 by Tanguy            #+#    #+#              #
-#    Updated: 2021/12/01 09:21:48 by Tanguy           ###   ########.fr        #
+#    Updated: 2021/12/01 10:17:10 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,11 @@ END         =   \033[0m
 
 CC =	gcc
 
-FLAGS =	-Wall -Werro -Wextra
+FLAGS =	-Wall -Werror -Wextra
 
-SRCS = errors.c init.c utils.c
+RM = rm -rf
+
+SRCS = errors.c init.c utils.c main.c
 
 HEADER = philo.h
 
@@ -40,12 +42,22 @@ $(NAME):	$(OBJS_SRCS)
 
 all:	$(NAME)
 
-norme:	norminette
+%.o: %.c $(HEADER)
+		 	@$(CC) $(FLAGS) -c $< -o $(<:.c=.o) -I philo.h
+		 	@printf "$(ERASE)$(YELLOW)$<....$(END)"
 
+norme:	
+		norminette *.c
+		norminette *.h
 clean:
+		@$(RM) $(OBJS_SRCS)
+		@printf "$(ERASE)$(RED)-> All files *.o cleaned$(END)\n"
 
 fclean:	clean
+		@$(RM) philo
+		@printf "$(ERASE)$(RED)-> Executable philo cleaned$(END)\n"
+		
 
-re:	fclean all
+re:		fclean all
 
 .PHONY:	all clean fclean re
