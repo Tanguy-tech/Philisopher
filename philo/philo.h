@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 14:25:00 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/01 12:17:11 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/02 09:40:24 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ typedef struct  s_rules
     pthread_mutex_t *forks; /* forks protected by mutexes to not overcross eachother */
     pthread_mutex_t writing; /* writing protected by mutexes to wait until writing is done before executing next step (to no continue if someone dies) */
     pthread_mutex_t meal;
-    t_philo         *philo; /* philo structure contains the philos */
+    t_philo         philo[250]; /* philo structure contains the philos */
     long long       initial_time; /* initial time when prog start */
     int             all_eaten;
 }               t_rules;

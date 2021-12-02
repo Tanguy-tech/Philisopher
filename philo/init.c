@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 15:03:37 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/01 12:16:35 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/02 09:55:17 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int init_philo(t_rules *rules)
     i = rules->nb_philo;
     while (--i >= 0)
     {
-        rules->philo->id = i;
-        rules->philo->ate = 0;
-        rules->philo->l_fork = i;
-        rules->philo->r_fork = (i + 1) % rules->nb_philo; /* so the right forks as same id as previous one as its supposed to be the same one */
-        rules->philo->tslm = 0;
-        rules->philo->rules = rules;
+        rules->philo[i].id = i;
+        rules->philo[i].ate = 0;
+        rules->philo[i].l_fork = i;
+        rules->philo[i].r_fork = (i + 1) % rules->nb_philo; /* so the right forks as same id as previous one as its supposed to be the same one */
+        rules->philo[i].tslm = 0;
+        rules->philo[i].rules = rules;
     }
     return (0);
 }
@@ -54,12 +54,14 @@ int initialize(t_rules *rules, char **av) /* Initialize general rules and check 
     rules->is_dead = 0;
     if (check_args(rules))
         return (1);
-    if (av[5]) /* if optionnal argument is present */
-        rules->to_eat = ft_atoi(av[5]);
-        if (rules->to_eat <= 0)
-            return (1);
-    else
-        rules->to_eat = -1; /* optionnal argument is not present so set value to -1 */
+    if (av[5])
+	{
+		rules->to_eat = ft_atoi(av[5]);
+		if (rules->to_eat <= 0)
+			return (1);
+	}
+	else
+		rules->to_eat = -1; /* optionnal argument is not present so set value to -1 */
     if (init_mutex(rules))
         return (MUTEX_ERR_CODE);
     init_philo(rules);

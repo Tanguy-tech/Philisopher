@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 14:50:51 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/01 11:07:55 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/02 09:44:44 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	error_manager(int err)
 int check_args(t_rules *rules)
 {
     if (rules->nb_philo < 2 || rules->t_die < 0 || rules->t_eat < 0
-		|| rules->t_sleep < 0)
+		|| rules->t_sleep < 0 || rules->nb_philo > 250)
         return (1);
     return (0);
 }
