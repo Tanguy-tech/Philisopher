@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 14:25:00 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/09 08:57:08 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/09 09:01:49 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@
 # define ARGS_ERROR "ARGUMENTS ERRORS! ./philo <number_of_philosophers> <time_to_die> <time_to_eat> <time_to_sleep> [number_of_times_each_philosopher_must_eat]"
 # define ARGS_NUM "Wrong number of arguments!"
 # define MUTEX_ERR_CODE 2
-# define MUTEX_ERROR "MUTEX INITIALIZATION ERROR! There was an error initialazing the mutex."
+# define MUTEX_ERROR "MUTEX ERROR! There was an error initialazing the mutex."
 # define THREAD_ERR_CODE 3
-# define THREAD_ERROR "THREAD ERROR! There was an error when creating the threads."
+# define THREAD_ERROR "TH ERROR! There was an error when creating the threads."
 # define TAKE_FORK "has taken a fork"
 # define EAT "is eating"
 # define SLEEP "is sleeping"

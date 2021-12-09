@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 15:03:37 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/09 08:17:25 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/09 09:21:56 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int	initialize(t_rules *rules, char **av) /* Initialize general rules and check 
 	rules->t_die = ft_atoi(av[2]);
 	rules->t_eat = ft_atoi(av[3]);
 	rules->t_sleep = ft_atoi(av[4]);
+	rules->all_eaten = 0;
 	rules->is_dead = 0;
 	if (check_args(rules))
 		return (1);
