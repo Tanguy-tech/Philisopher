@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 14:13:58 by Tanguy            #+#    #+#              #
-#    Updated: 2021/12/09 08:39:10 by Tanguy           ###   ########.fr        #
+#    Updated: 2021/12/09 08:50:28 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,8 @@ all:	$(NAME)
 		 	@printf "$(ERASE)$(YELLOW)$<....$(END)"
 
 norme:	
-		norminette *.c
-		norminette *.h
+		@norminette *.c
+		@norminette *.h
 clean:
 		@$(RM) $(OBJS_SRCS)
 		@printf "$(ERASE)$(RED)-> All files *.o cleaned$(END)\n"
